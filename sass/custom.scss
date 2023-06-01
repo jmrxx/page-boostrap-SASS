@@ -1,0 +1,132 @@
+       /* custom.scss */
+
+       /* import the necessary Bootstrap files */
+       @import "../bootstrap-5.2.2/scss/functions";
+       @import "../bootstrap-5.2.2/scss/variables";
+
+       /* -------begin customization-------- */
+
+       /* simply assign the value */
+       $body-bg: #ffff;
+       $body-color: #000;
+
+       /* Paleta de  colores */
+       $blue-dark : #002860;
+       $blue-celadon: #0380B2;
+       $blue-crayola: #A8B8C9;
+       $oxford-blue: #001334;
+       $green: #198754;
+       $red: #dc3545;
+       $cyan: #0dcaf0;
+       $yellow: #ffc107;
+
+       /* or, use an existing variable */
+       $theme-colors: (
+           primary: $blue-celadon,
+           secondary: $blue-dark ,
+           success: $green,
+           info: $cyan,
+           warning: $yellow,
+           danger: red,
+           light: $blue-crayola,
+           dark: $oxford-blue
+       );
+       /* -------begin customization-------- */
+
+
+
+       /* finally, import Bootstrap to set the changes! */
+       $theme-colors: (
+           ) !default;
+       // stylelint-disable-next-line scss/dollar-variable-default
+       $theme-colors: map-merge(("primary": $primary,
+                   "secondary": $secondary,
+                   "success": $success,
+                   "info": $info,
+                   "warning": $warning,
+                   "danger": $danger,
+                   "light": $light,
+                   "dark": $dark ),
+               $theme-colors
+       );
+
+       // Logo color change
+       .container-fluid {
+           background-color: $blue-dark;
+       }
+
+       .navbar {
+           color: #ffff;
+
+           .navbar-brand {
+               color: $primary;
+               font-size: 24px;
+           }
+       }
+
+
+       // Configuration
+
+       @import "../bootstrap-5.2.2/scss/maps";
+       @import "../bootstrap-5.2.2/scss/mixins";
+       @import "../bootstrap-5.2.2/scss/utilities";
+       @import "../bootstrap-5.2.2/scss/root";
+       @import "../bootstrap-5.2.2/scss/reboot";
+       @import "../bootstrap-5.2.2/scss/type";
+       @import "../bootstrap-5.2.2/scss/images";
+
+       // quitar redondeo de las imagenes
+       .card{
+        border-radius:0% !important; 
+        }
+       .card-img,
+       .card-img-top {
+           border-top-left-radius: 0% !important;
+           border-top-right-radius: 0% !important;
+       }
+
+
+       @import "../bootstrap-5.2.2/scss/containers";
+       @import "../bootstrap-5.2.2/scss/grid";
+       @import "../bootstrap-5.2.2/scss/tables";
+       @import "../bootstrap-5.2.2/scss/forms";
+       @import "../bootstrap-5.2.2/scss/buttons";
+
+        %hover {
+            &:hover{
+             background-color: #4194d5;
+              color: #ffff;
+            }
+        }
+  
+        .button1{
+            @extend %hover;
+        }
+    
+       @import "../bootstrap-5.2.2/scss/transitions";
+       @import "../bootstrap-5.2.2/scss/dropdown";
+       @import "../bootstrap-5.2.2/scss/button-group";
+       @import "../bootstrap-5.2.2/scss/nav";
+       @import "../bootstrap-5.2.2/scss/navbar";
+       @import "../bootstrap-5.2.2/scss/card";
+       @import "../bootstrap-5.2.2/scss/accordion";
+       @import "../bootstrap-5.2.2/scss/breadcrumb";
+       @import "../bootstrap-5.2.2/scss/pagination";
+       @import "../bootstrap-5.2.2/scss/badge";
+       @import "../bootstrap-5.2.2/scss/alert";
+       @import "../bootstrap-5.2.2/scss/progress";
+       @import "../bootstrap-5.2.2/scss/list-group";
+       @import "../bootstrap-5.2.2/scss/close";
+       @import "../bootstrap-5.2.2/scss/toasts";
+       @import "../bootstrap-5.2.2/scss/modal";
+       @import "../bootstrap-5.2.2/scss/tooltip";
+       @import "../bootstrap-5.2.2/scss/popover";
+       @import "../bootstrap-5.2.2/scss/carousel";
+       @import "../bootstrap-5.2.2/scss/spinners";
+       @import "../bootstrap-5.2.2/scss/offcanvas";
+       @import "../bootstrap-5.2.2/scss/placeholders";
+       @import "../bootstrap-5.2.2/scss/helpers";
+
+
+
+       @import "../bootstrap-5.2.2/scss/utilities/api";
